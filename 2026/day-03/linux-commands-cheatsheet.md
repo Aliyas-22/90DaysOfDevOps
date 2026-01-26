@@ -15,7 +15,7 @@
   3) ls - list file and directries
   4) mv - to move files
   5) rm - to delete item
-  6) cp - to copy item
+  6) cp - to copy file
   7) pwd - to see present working directory
   8) cd - to change path
 
