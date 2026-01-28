@@ -1,10 +1,17 @@
-## mini Runbook , using docker service ## 
-## 1)-firstly we are going to check is available oeprating system is update or not we do = lsb_release -a
+## Linux troubleshooting mini Runbook 
+# Target service
+   DOCKER 
+   #
+## step 1: check operating system information 
+command :
+lsb_release -a
 # output:
-No LSB modules are available.
-Distributor ID: Ubuntu
+Distributor ID: Ubuntu 
+
 Description:    Ubuntu 24.04.3 LTS
+
 Release:        24.04
+
 Codename:       noble
 #
 ## 2)- done with checking install updates of ubuntu by doing this command = sudo apt update
