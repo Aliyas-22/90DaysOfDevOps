@@ -20,39 +20,35 @@ firstly create log files inside the /var/log/myapp
 - sudo touch text1.log ,text2.log, text3.log
 1)create file log_routate.sh
 2)then takes argument
-3)make a variable and give it initial value zero
-4)use for loop
-5)write command in this (gzip)
-6)then create variable again for delete give it initial value zero
-7)use echo
+3)write command in this (gzip)
 code :-
 
-log_dir=$1
-        if [ ! -d "$log_dir" ]; then
+create_rotation(){
+
+        echo "usage: <./log_rotation.sh source > < /var/log/myapp folder>"
+}
+if [ $# -eq 0 ]; then
+        create_rotation
+fi
+
+LOG_DIR=$1
+        if [ ! -d "$LOG_DIR" ]; then
     echo "directory is not found"
     exit 1
 else
     echo "log directory found"
 fi
-compressed_count=0
-deleted_count=0
-for file in $(find "$log_dir" -type f -name "*.log" )
-do
-        gzip "$file"
-        ((compressed_count++))
-done
-for file in $(find "$log_dir" -type f -name "*.gz" -mtime +30)
-do
-        rm "$file"
-        ((deleted_count++))
-done
-echo "compressed name : $compressed_count files"
-echo "deleted: $deleted_count files"
+echo "Starting log rotation in $LOG_DIR..."
+COMPRESSED=$(find "$LOG_DIR" -type f -name "*.log" -mtime +7 -exec gzip {} +  -print | wc -l)
+DELETED=$(find "$LOG_DIR" -type f -name "*.gz" -mtime +30 -print -delete | wc -l)
+echo "Compressed files: $COMPRESSED"
+echo "Deleted files: $DELETED"
+
+echo "Log rotation completed."
 ```
 ## OUTPUT
-<img width="1920" height="440" alt="Screenshot (113)" src="https://github.com/user-attachments/assets/1988fd9c-e97a-409b-980f-20301991eaee" />
-<img width="1920" height="165" alt="Screenshot (112)" src="https://github.com/user-attachments/assets/f1a8fe59-7352-48dd-b8b9-7b1a0a973250" />
 
+<img width="1920" height="450" alt="Screenshot (114)" src="https://github.com/user-attachments/assets/cb1aab70-1344-4c3f-809a-91adf7c50988" />
 
 ## Task 2: Server Backup Script!
 
