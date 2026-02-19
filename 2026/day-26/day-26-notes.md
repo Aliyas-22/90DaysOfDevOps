@@ -39,11 +39,12 @@
 ###    List all open issues on that repo
   + ``` gh issue list  --repo Aliyas-22/practice-cli ```
 ###    View a specific issue by its number
- + ``` gh issue view 1 --repo Aliyas-22/practice-cli
+ + ``` gh issue view 1 --repo Aliyas-22/practice-cli ```
 ###    Close an issue from the terminal
  + ``` gh issue close --repo Aliyas-22/practice-cli ```
 ###    Answer in your notes: How could you use gh issue in a script or automation?
-+
++ we can use the issue in monitoring scripts
++ to track failiure
 
 
 # Task 4: Pull Requests
@@ -103,8 +104,11 @@
   ###  gh gist — create and manage GitHub Gists
   + gh gist create file.txt
   ###  gh release — create and manage releases
+  + gh release create v1.0.0
  ###   gh alias — create shortcuts for commands you use often
+ + gh alias set mypr "list --author @me"
  ###   gh search repos — search GitHub repos from the terminal
+ + gh search repos docker
 
 
 
