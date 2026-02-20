@@ -67,6 +67,7 @@
 🟥 Schedule scripts with crontab
 
 # Task 2: Revisit Your Weak Spots
+
 ❗ Create and manage LVM volumes
 
  ### day-13-lvm.md
@@ -97,6 +98,22 @@
 <img width="1920" height="380" alt="Screenshot (172)" src="https://github.com/user-attachments/assets/add4c34f-be3e-4fde-be9c-d395db6839e9" />
 
 
+❗ Schedule scripts with crontab
+
+
++ practiced shedulling script using crontab
++ like how to create crontaband how to schedule task with the help of cron
+     + checked exsisting crontab ``` crontab -l ```
+     + create shell script
+     + then opened the ```crontab -e```
+     + selected nano editor and added ``` */2 * * * * /``` this means every two minutes every hour everyday
+     + then execute that .sh file
+     + inside that file i see the logs
+     + and deletd it 
+# screenshots
+
+<img width="1920" height="165" alt="Screenshot (174)" src="https://github.com/user-attachments/assets/b9a66c54-201f-465f-b271-22826ccc1d95" />
+<img width="1784" height="754" alt="Screenshot (173)" src="https://github.com/user-attachments/assets/d4fe6c35-912f-4e6d-a1e8-cff5c71c84d6" />
 
 
 
@@ -155,8 +172,8 @@ Teaching is the best test of understanding.
 # explain what is lvm 
 + LVM is a way to manage computer storage smartly.
 + In normal systems, storage is fixed.
-+If one part becomes full, we cannot change it easily.
-+LVM allows us to increase or decrease space anytime without stopping the system.
++ If one part becomes full, we cannot change it easily.
++ LVM allows us to increase or decrease space anytime without stopping the system.
 That’s why it is very useful for servers.
 + we can create the storage usiing these three :
     + physical volume
