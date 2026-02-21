@@ -30,8 +30,6 @@
 
 ✅ Write for, while, and until loops
 
-✅Use grep, awk, sed, sort, uniq for text processing
-
 ✅ Define and call functions with arguments and return values
 
 ✅  Handle errors with set -e, set -u, set -o pipefail, trap
@@ -65,6 +63,9 @@
 🟥 Create and manage LVM volumes
 
 🟥 Schedule scripts with crontab
+
+🟥Use grep, awk, sed, sort, uniq for text processing
+
 
 # Task 2: Revisit Your Weak Spots
 
@@ -115,6 +116,23 @@
 <img width="1920" height="165" alt="Screenshot (174)" src="https://github.com/user-attachments/assets/b9a66c54-201f-465f-b271-22826ccc1d95" />
 <img width="1784" height="754" alt="Screenshot (173)" src="https://github.com/user-attachments/assets/d4fe6c35-912f-4e6d-a1e8-cff5c71c84d6" />
 
+❗ Use grep, awk, sed, sort, uniq for text processing
+
++ practied grep to find lines such as
+  + INFO ``` grep "INFO" logs.txt |sort|uniq -c```
+  + ERROR ```grep "ERROR" logs.txt |sort|uniq -c```
+  + WARNING```grep "WARNING" logs.txt |sort|uniq -c```
++ practiced awk to search coloume wise log
+  
++ ``` awk '$1=="ERROR" log.txt ```
++ sort to arrange data in alphabetical order
++ ```awk '$1=="ERROR" log.txt |sort```
+  
++ uniq will remove the dublicates lines in the logs and print a single line only
++ ```awk '$1=="ERROR" log.txt |sort |uniq -c```
+
+# screenshots
+<img width="1920" height="1080" alt="Screenshot (176)" src="https://github.com/user-attachments/assets/70108964-cc7d-4ff5-85fe-bc502ebd327b" />
 
 
 
