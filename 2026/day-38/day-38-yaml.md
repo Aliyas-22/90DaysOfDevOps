@@ -151,6 +151,5 @@ tools:
 ```
 + bad indentation!!
 + List items under tools are not aligned at the same indentation level
-+ causing YAML to interpret the structure incorrectly and causing the error
 
   
