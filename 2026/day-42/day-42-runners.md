@@ -57,7 +57,7 @@
     ```
 + Look up the GitHub docs for the full list of pre-installed software on ubuntu-latest
 + Write in your notes: Why does it matter that runners come with tools pre-installed?
-
+    + **Pre-installed tools save setup time, so the workflow starts executing immediately without wasting pipeline minutes on installing basic dependencies every run.**
 
 <img width="1920" height="917" alt="Screenshot (299)" src="https://github.com/user-attachments/assets/db30ca6f-7ff6-4978-92d8-c17ceddf62d4" />
 
