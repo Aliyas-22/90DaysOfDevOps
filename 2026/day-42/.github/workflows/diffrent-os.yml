@@ -1,0 +1,53 @@
+# Create a workflow with 3 jobs, each on a different OS:
+# ubuntu-latest
+# windows-latest
+# macos-latest
+# In each job, print:
+# The OS name
+# The runner's hostname
+# The current user running the job
+# Watch all 3 run in parallel
+
+name: Different OS Workflow
+on:
+    push:
+        branches:
+            - main
+jobs:
+    check-ubuntu:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Print OS and runner info
+              run: |
+                  echo "Running on ${{runner.os}}"
+                  echo "Hostname: $HOSTNAME"
+                  echo "Current user: $USER"
+
+    check-windows:
+        runs-on: windows-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Print OS and runner info
+              run: |
+                  echo "Running on ${{runner.os}}"
+                  echo "Hostname: %COMPUTERNAME%"
+                  echo "Current user: %USERNAME%"
+    check-macos:
+        runs-on: macos-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Print OS and runner info
+              run: |
+                  echo "Running on ${{runner.os}}"
+                  echo "Hostname: $HOSTNAME"
+                  echo "Current user: $USER"
