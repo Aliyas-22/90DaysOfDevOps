@@ -74,6 +74,39 @@
 
    
 
-     <img width="1920" height="873" alt="Screenshot (335)" src="https://github.com/user-attachments/assets/c8a78cd5-8445-4d36-8e39-0f960bb2b0c1" />
+    <img width="1920" height="873" alt="Screenshot (335)" src="https://github.com/user-attachments/assets/c8a78cd5-8445-4d36-8e39-0f960bb2b0c1" />
+
+    ---
+
+   ## Task 6: Pull and Run It
++ On your local machine (or a cloud server), pull the image you just pushed
++ Run it
++ Confirm it works
++ Write in your notes: What is the full journey from git push to a running container?
+```
+1.  i write code on my laptop
+        ↓
+2. git push → goes to GitHub
+        ↓
+3. GitHub Actions workflow triggers automatically
+        ↓
+4. Runner checks out my code
+        ↓
+5. Runner logs in to DockerHub
+        ↓
+6. Runner builds my Docker image
+        ↓
+7. Runner pushes image to DockerHub
+        ↓
+8. i pulls the image from DockerHub
+        ↓
+9. docker-compose up → container is running
+
+```
+
+  <img width="1171" height="248" alt="Screenshot (341)" src="https://github.com/user-attachments/assets/4154c07c-2357-43b5-bf01-41d81e8df233" />
+<img width="1920" height="918" alt="Screenshot (340)" src="https://github.com/user-attachments/assets/f2875029-ea0d-460a-92bd-87cd15a9d1b5" />
+
+
 
 
