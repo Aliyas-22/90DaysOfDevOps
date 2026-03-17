@@ -243,4 +243,46 @@ kubectl get pods -A
 
 <img width="1904" height="673" alt="Screenshot (415)" src="https://github.com/user-attachments/assets/a5d4f9b5-94e8-4b30-b246-122f2f9669b8" />
 
- 
+---
+
+## Documentation
+Create `day-52-namespaces-deployments.md` with:
+
+
+- What namespaces are and why you would use them
+  
+   + **A Namespace in Kubernetes is a logical grouping used to organize and isolate resources within a cluster.**
+   + **It helps separate environments like development, testing, and production, so resources don’t conflict with each other.**
+   + **It also makes management easier when many resources are running in the same cluster.**
+   
+- Your Deployment manifest and an explanation of each section
++ Deployment manifest is a YAML file used to define the desired state of an application. It includes:
+```
++ apiVersion & kind → define the resource type (Deployment)
+
++ metadata → includes name, labels, and namespace
+
++ spec.replicas → number of Pods we want
+
++ spec.selector → matches Pods using labels
+
++ spec.template → defines how Pods are created
+
++ metadata → labels for Pods
+
++ spec → container details (image, ports, etc.)
+```
+  
+- What happens when you delete a Pod managed by a Deployment vs a standalone Pod
+    + **When a Pod managed by a Deployment is deleted, Kubernetes automatically creates a new Pod to maintain the desired number of replicas.**
+    + **However, if a standalone Pod is deleted, it is not recreated because no controller is managing it.**
+  
+- How scaling works (both imperative and declarative)
+   + **Imperative scaling uses commands, while declarative scaling updates the YAML file and applies it.**
+
+  
+- How rolling updates and rollbacks work
+    + **Rolling updates allow updating an application (like changing the image version) gradually without downtime. Kubernetes replaces old Pods with new ones step by step.**
+    + **If something goes wrong, a rollback can revert the Deployment to the previous working version.**
+  
+ ---
