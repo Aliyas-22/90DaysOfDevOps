@@ -229,7 +229,41 @@ terraform destroy
 ## Documentation
 
 - IaC explanation in your own words (3-4 sentences)
+   +  suppose i want to create one instance i can create easily but when it comes to creating 20 or 30 instance
+   +  it will take time and definatly human error chances so for that IaC is usefull
+   +  With IaC i only need to create one file and with just one command ```terraform apply```
+   +  everything became easy
+   +  so basically instead of clicking
+ 
+---
+
 - What each Terraform command does (init, plan, apply, destroy, show, state list)
+    + terraform plan-
+        + create the execution plan by comparing the state code with current state and it shows what changes will be made
+          (this will preview only not apply changes)
+---
+   + terraform init-
+         + terraform init initializes a Terraform working directory by downloading required providers,
+         + setting up the backend, and preparing the environment to run Terraform commands.
+---
+   + terraform destroy-
+         + delete all the resource managed by terraform in current configuaration (completely)
+---
+   + terraform apply-
+        + executes the changes matches to desire state means it accually modifies infrastructure
+---
+   + terraform show-
+        + Displays the current state or a saved plan in a human-readable format
+---
+   + terraform state list-
+       + Lists all resources currently tracked in the Terraform state file.       
+    
+---  
 - What the state file contains and why it matters
+    + the Terraform state file contains the current state of infrastructure, including resource IDs,
+    + attributes, metadata, and dependencies. It acts as a source of truth that Terraform uses to compare the desired configuration with
+    + the actual infrastructure, allowing it to plan and apply only the necessary changes
+
+---
 
 ---
