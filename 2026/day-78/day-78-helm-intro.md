@@ -244,8 +244,6 @@ version: 12.2.1      # Chart version (chart structure changes)
 appVersion: "8.0.40"  # Version of MySQL inside the chart
 ```
 
-<img width="1509" height="131" alt="Screenshot (999)" src="https://github.com/user-attachments/assets/f56a4276-4939-4673-85d5-92002b1e8636" />
-
 
 **Now compare the Helm chart approach to the AI-BankApp's raw manifests:**
 
@@ -275,5 +273,7 @@ Clean up:
 helm uninstall bankapp-mysql
 rm -rf mysql/
 ```
+<img width="1509" height="131" alt="Screenshot (999)" src="https://github.com/user-attachments/assets/f56a4276-4939-4673-85d5-92002b1e8636" />
+
 
 ---
