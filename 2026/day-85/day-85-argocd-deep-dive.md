@@ -110,21 +110,20 @@ argocd app diff bankapp
 ```bash
 # Dry run -- show what would change
 argocd app sync bankapp --dry-run
+# Sync for real
+argocd app sync bankapp
 
+
+```
 <img width="1478" height="606" alt="Screenshot (1190)" src="https://github.com/user-attachments/assets/d0352db1-ded3-4867-bf8f-a003f952eb9f" />
 <img width="1555" height="724" alt="Screenshot (1192)" src="https://github.com/user-attachments/assets/e0a87288-d013-40fa-a0e3-27576d9a13ee" />
 <img width="1477" height="711" alt="Screenshot (1191)" src="https://github.com/user-attachments/assets/24e7faea-2471-492d-a517-a136a5294025" />
 
-# Sync for real
-argocd app sync bankapp
+In the UI, clicking "Sync" shows a preview dialog listing all resources that will change.
 
 <img width="1588" height="727" alt="Screenshot (1200)" src="https://github.com/user-attachments/assets/6747d163-89e5-4e19-8fe9-8512a135b7ab" />
 <img width="1598" height="709" alt="Screenshot (1199)" src="https://github.com/user-attachments/assets/fa6cc829-3e3e-44ff-890a-986a65d77deb" />
 <img width="1669" height="738" alt="Screenshot (1201)" src="https://github.com/user-attachments/assets/09033502-3d5d-4f19-9c83-cd239a807952" />
-
-```
-
-In the UI, clicking "Sync" shows a preview dialog listing all resources that will change.
 
 **Switch back to automated:**
 ```bash
